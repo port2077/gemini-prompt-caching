@@ -1,0 +1,9 @@
+[project]
+name = "gemini-cache-dead-zone"
+version = "0.1.0"
+description = "Reproduction: Gemini implicit caching dead zone (~9K-17K prompt tokens) on gemini-3-flash-preview"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.14.0",
+]
