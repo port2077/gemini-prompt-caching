@@ -2,6 +2,8 @@
 
 This script tests a weird caching issue with **`gemini-3-flash-preview`** where implicit caching just stops working between ~9K–17K prompt tokens. Like, it drops to **0** even though we're sending the exact same prefix every time. Then after that, it locks to weird plateaus (~16K, ~24K, ~32K) instead of growing smoothly.
 
+The issue is tracked [here](https://github.com/googleapis/python-genai/issues/2064).
+
 ## What's happening
 
 The script makes a conversation that grows with each turn. Same system prompt every time, same conversation history - just adding new stuff to the end. Nothing changes in what I have sent before.
